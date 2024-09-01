@@ -157,6 +157,7 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../../../public/Ceven.png";
+import { Link } from "react-router-dom";
 
 function CNav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -191,18 +192,20 @@ function CNav() {
     <>
       {/* Logo */}
       <div className="container mx-auto p-6 flex justify-start items-center">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-roboto font-bold text-[#FAAE3E] -ml-60">
-          <img
-            src={logo}
-            alt="ceven logo"
-            className="w-[5rem] filter bg-transparent mix-blend-multiply"
-          />
+        <div className="text-2xl md:text-3xl lg:text-4xl font-roboto font-bold  -ml-60">
+          <Link to={"/"}>
+            <img
+              src={logo}
+              alt="ceven logo"
+              className="w-[5rem] lg:ml-[7rem]  filter bg-transparent mix-blend-multiply"
+            />
+          </Link>
         </div>
       </div>
 
       {/* Navbar for Large Screens */}
       <div
-        className={`bg-richBlack container mx-auto -mb-28 p-4 flex justify-center sticky top-0 z-30 bg-transparent border-b-4 border-silverLakeBlue rounded-full shadow-lg transition-transform duration-300 ${
+        className={`bg-richBlack container mx-auto -mb-28 p-4 flex justify-center sticky top-0 z-30 bg-transparent border-b-4 border-silverLakeBlue rounded-full shadow-lg transition-transform duration-300 lg:ml-[10rem] ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
         style={{ marginTop: "-92px" }}

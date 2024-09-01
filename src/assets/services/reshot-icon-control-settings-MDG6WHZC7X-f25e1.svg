@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140.001" height="111.15" viewBox="0 0 140.001 111.15">
+  <g>
+    <path d="M37.59,103.54H18.84A16.9,16.9,0,0,1,2,86.59V19A16.9,16.9,0,0,1,18.8,2H121.16A16.9,16.9,0,0,1,138,18.96V86.59a16.9,16.9,0,0,1-16.8,17H100.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="136.04" y1="31.68" x2="2" y2="31.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="17.75" y1="18.07" x2="19.89" y2="18.07" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="34.27" y1="18.07" x2="36.41" y2="18.07" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="50.78" y1="18.07" x2="52.92" y2="18.07" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M96,67.44l-3-5.19a4.1,4.1,0,0,0-5.59-1.49L82,63.85a4.1,4.1,0,0,1-6.14-3.53V54.15a4.079,4.079,0,0,0-4.09-4.07h-6a4.08,4.08,0,0,0-4.09,4.07h0v6.17a4.1,4.1,0,0,1-6.14,3.53l-5.37-3.09a4.1,4.1,0,0,0-5.59,1.49l-3,5.19A4.06,4.06,0,0,0,43,73l5.38,3.09a4.059,4.059,0,0,1,0,7L43,86.23a4.061,4.061,0,0,0-1.5,5.542l.01.018,3,5.19a4.11,4.11,0,0,0,5.59,1.49l5.37-3.09a4.09,4.09,0,0,1,6.14,3.52v6.18a4.08,4.08,0,0,0,4.09,4.07h6a4.079,4.079,0,0,0,4.09-4.07h0V98.9A4.09,4.09,0,0,1,82,95.38l5.37,3.09A4.11,4.11,0,0,0,93,97.008L93,97l3-5.19a4.06,4.06,0,0,0-1.472-5.55l-.018-.01L89.1,83.14a4.071,4.071,0,0,1,0-7L94.48,73a4.06,4.06,0,0,0,1.536-5.533Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <ellipse cx="68.76" cy="79.61" rx="11.48" ry="11.43" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

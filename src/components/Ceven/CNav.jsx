@@ -197,7 +197,7 @@ function CNav() {
             <img
               src={logo}
               alt="ceven logo"
-              className="w-[5rem] lg:ml-[7rem]  filter bg-transparent mix-blend-multiply"
+              className="w-[5rem] lg:ml-[7rem] xl:ml-[7rem] filter bg-transparent mix-blend-multiply"
             />
           </Link>
         </div>

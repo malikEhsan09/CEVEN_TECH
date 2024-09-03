@@ -1,5 +1,6 @@
 import { CardStack } from "../ui/card-stack";
 import { SparklesCore } from "../ui/sparkles.jsx";
+import { useState, useEffect } from "react";
 
 // Sample project images as strings
 const CARDS = [
@@ -30,34 +31,47 @@ const CARDS = [
 ];
 
 export default function CProjects() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       id="projects"
-      className="h-[50rem] flex flex-col items-center justify-center w-full -mt-[8rem]"
+      className="min-h-screen flex flex-col items-center justify-center w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       {/* Heading */}
-      <h1 className="md:text-7xl text-4xl lg:text-6xl font-bold text-center text-white relative z-20 mb-2">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white relative z-20 mb-4 sm:mb-6 md:mb-8">
         Projects
       </h1>
 
       {/* Decorative Elements */}
-      <div className="w-[40rem] h-40 relative mb-1">
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+      <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-20 sm:h-30 md:h-40 relative mb-4 sm:mb-6 md:mb-8">
+        <div className="absolute inset-x-10 sm:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-10 sm:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-30 sm:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-30 sm:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
         <SparklesCore
           background="transparent"
           minSize={0.4}
           maxSize={1}
-          particleDensity={1200}
+          particleDensity={isMobile ? 600 : 1200}
           className="w-full h-full"
           particleColor="#FFFFFF"
         />
       </div>
 
       {/* Card Stack */}
-      <div className="-mt-[4rem]">
+      <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]">
         <CardStack items={CARDS} />
       </div>
     </div>

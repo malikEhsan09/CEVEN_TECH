@@ -89,19 +89,19 @@ function CApproach() {
   return (
     <div
       id="approach"
-      className="flex flex-col justify-center items-center mt-10 pb-10 font-roboto mx-auto space-y-8"
+      className="flex flex-col justify-center items-center mt-10 pb-10 font-roboto mx-auto space-y-4 sm:space-y-6 md:space-y-8"
     >
-      <div className="w-full bg-richBlack flex flex-col items-center justify-center overflow-hidden rounded-md">
-        <h1 className="md:text-7xl text-4xl lg:text-6xl font-bold text-center text-white relative z-20 mb-2">
+      <div className="w-full bg-richBlack flex flex-col items-center justify-center overflow-hidden rounded-md px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white relative z-20 mb-2 sm:mb-4">
           Our Approach
         </h1>
 
         {/* Decorative Elements */}
-        <div className="w-[40rem] h-40 relative mb-1">
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+        <div className="w-full max-w-[40rem] h-20 sm:h-30 md:h-40 relative mb-1 sm:mb-2">
+          <div className="absolute inset-x-10 sm:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+          <div className="absolute inset-x-10 sm:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+          <div className="absolute inset-x-30 sm:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+          <div className="absolute inset-x-30 sm:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
           <SparklesCore
             background="transparent"
             minSize={0.4}
@@ -112,7 +112,7 @@ function CApproach() {
           />
         </div>
 
-        <div className="-mt-36 grid-cols-2 w-[70rem]">
+        <div className="-mt-16 sm:-mt-24 md:-mt-36 w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[70rem]">
           <CanvasRevealEffectDemo />
         </div>
       </div>

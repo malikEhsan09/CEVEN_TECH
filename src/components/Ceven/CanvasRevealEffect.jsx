@@ -8,7 +8,7 @@ import { CanvasRevealEffect } from "../../components/ui/canvas-reveal-effect.jsx
 
 export function CanvasRevealEffectDemo() {
   return (
-    <div className="py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center bg-white dark:bg-richBlack xl:w-[80rem] lg:-ml-20 md:w-auto mx-auto px-8 hover:cursor-pointer">
+    <div className="py-10 grid grid-cols-1 rounded-md lg:grid-cols-2 gap-8 items-center justify-center bg-white dark:bg-richBlack xl:w-[80rem] lg:-ml-20 md:w-auto mx-auto px-8 hover:cursor-pointer">
       <Card
         title="Client-Centric"
         icon={<img src={arrow} alt="" className="mx-auto h-16 lg:h-20" />}

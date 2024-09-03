@@ -3,20 +3,34 @@ import ehsan from "../../assets/team/ehsan1.jpg";
 import moiz from "../../assets/team/moiz.jpg";
 import ajmal from "../../assets/CEO CTO/ajmaledit.jpg";
 import { SparklesCore } from "../ui/sparkles.jsx";
+import { useState, useEffect } from "react";
 
 export default function CTestimonials() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       id="testimonials"
-      className="h-[50rem] flex flex-col items-center justify-center w-full -mt-[8rem]"
+      className="min-h-screen flex flex-col items-center justify-center w-full py-16 px-4 sm:px-6 lg:px-8"
     >
       {/* Heading */}
-      <h1 className="md:text-7xl text-4xl lg:text-6xl font-bold text-center text-white relative z-20 mb-2">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white relative z-20 mb-8">
         Testimonials
       </h1>
 
       {/* Decorative Elements */}
-      <div className="w-[40rem] h-40 relative mb-1">
+      <div className="w-full max-w-[40rem] h-40 relative mb-8">
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
@@ -31,19 +45,28 @@ export default function CTestimonials() {
         />
       </div>
       {/* Cards */}
-      <div className="flex justify-center space-x-4 -mt-[2rem]">
+      <div
+        className={`flex ${isMobile ? "flex-col" : "flex-row"} justify-center ${
+          isMobile ? "space-y-8" : "space-x-4"
+        }`}
+      >
         {CARDS.map((card, index) => (
           <div
             key={card.id}
-            className={`transition-transform duration-300 ease-in-out transform ${
-              index === 1 ? "scale-110 z-10" : ""
-            } hover:scale-125 hover:z-20 bg-white dark:bg-richBlack rounded-3xl p-6 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between w-96 h-96 cursor-pointer`}
+            className={`transition-transform duration-300 ease-in-out transform 
+              ${isMobile ? "scale-100" : index === 1 ? "scale-110 z-10" : ""} 
+              hover:scale-105 hover:z-20 bg-white dark:bg-richBlack rounded-3xl p-6 shadow-xl 
+              border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] 
+              dark:shadow-white/[0.05] flex flex-col justify-between 
+              ${
+                isMobile ? "w-full" : "w-80 md:w-96"
+              } h-auto md:h-96 cursor-pointer mb-8 md:mb-0`}
           >
             <div className="flex flex-col items-center flex-grow">
               <img
                 src={card.image}
                 alt={card.name}
-                className="w-24 h-24 rounded-full mb-4"
+                className="w-20 h-20 md:w-24 md:h-24 rounded-full mb-4"
               />
               <div className="font-normal text-neutral-700 dark:text-neutral-200 text-center flex-grow">
                 {card.content}

@@ -9,14 +9,14 @@ import {
 
 const AnimatedTooltip = ({ items }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const springConfig = { stiffness: 100, damping: 5 };
+  const springConfig = { stiffness: 50, damping: 10 }; // Reduced stiffness and increased damping for subtler animation
   const x = useMotionValue(0);
   const rotate = useSpring(
-    useTransform(x, [-100, 100], [-45, 45]),
+    useTransform(x, [-100, 100], [-15, 15]), // Reduced rotation range
     springConfig
   );
   const translateX = useSpring(
-    useTransform(x, [-100, 100], [-50, 50]),
+    useTransform(x, [-100, 100], [-20, 20]), // Reduced translation range
     springConfig
   );
 
@@ -37,18 +37,18 @@ const AnimatedTooltip = ({ items }) => {
           <AnimatePresence mode="popLayout">
             {hoveredIndex === item.id && (
               <motion.div
-                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                initial={{ opacity: 0, y: 10, scale: 0.8 }} // Reduced initial values
                 animate={{
                   opacity: 1,
                   y: 0,
                   scale: 1,
                   transition: {
                     type: "spring",
-                    stiffness: 260,
-                    damping: 10,
+                    stiffness: 100, // Reduced stiffness
+                    damping: 15, // Increased damping
                   },
                 }}
-                exit={{ opacity: 0, y: 20, scale: 0.6 }}
+                exit={{ opacity: 0, y: 10, scale: 0.8 }} // Reduced exit values
                 style={{
                   translateX: translateX,
                   rotate: rotate,

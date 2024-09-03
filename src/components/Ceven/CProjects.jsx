@@ -71,8 +71,10 @@ export default function CProjects() {
       </div>
 
       {/* Card Stack */}
-      <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]">
-        <CardStack items={CARDS} />
+      <div className="w-full flex justify-center">
+        <div className="w-full max-w-[300px] self-center sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]">
+          <CardStack items={CARDS} />
+        </div>
       </div>
     </div>
   );

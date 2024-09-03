@@ -45,15 +45,15 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
   };
 
   return (
-    <div className="relative h-[calc(24rem+3rem)] w-96 md:h-[calc(24rem+3rem)] md:w-[40rem]">
+    <div className="relative h-[calc(16rem+2rem)] w-64 sm:h-[calc(20rem+2.5rem)] sm:w-80 md:h-[calc(24rem+3rem)] md:w-96 lg:h-[calc(28rem+3.5rem)] lg:w-[36rem] xl:h-[calc(32rem+4rem)] xl:w-[40rem]">
       {/* Previous Arrow */}
       <button
         onClick={goToPrev}
-        className="absolute top-1/2 left-[-3rem] transform -translate-y-1/2 p-2 rounded-full bg-chamBray hover:bg-oxfordBlue transition cursor-pointer z-20"
+        className="absolute top-1/2 left-[-2rem] sm:left-[-2.5rem] md:left-[-3rem] transform -translate-y-1/2 p-1 sm:p-1.5 md:p-2 rounded-full bg-chamBray hover:bg-oxfordBlue transition cursor-pointer z-20"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-white"
+          className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -72,24 +72,26 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
         return (
           <motion.div
             key={card.id}
-            className="absolute dark:bg-richBlack bg-white h-96 w-96 md:h-96 md:w-[40rem] rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
+            className="absolute dark:bg-richBlack bg-white h-64 w-64 sm:h-80 sm:w-80 md:h-96 md:w-96 lg:h-[28rem] lg:w-[36rem] xl:h-[32rem] xl:w-[40rem] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
             style={{
               transformOrigin: "top center",
             }}
             animate={{
               top: index * -CARD_OFFSET,
-              scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-              zIndex: cards.length - index, // decrease z-index for the cards that are behind
+              scale: 1 - index * SCALE_FACTOR,
+              zIndex: cards.length - index,
             }}
           >
             <div className="relative group">
               <img
                 src={card.image}
                 alt={card.name}
-                className="w-full h-96 object-cover rounded-3xl transition-all duration-300"
+                className="w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] object-cover rounded-2xl sm:rounded-3xl transition-all duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 rounded-3xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-center p-8">{card.description}</p>
+              <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl sm:rounded-3xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-center p-4 sm:p-6 md:p-8 text-sm sm:text-base md:text-lg">
+                  {card.description}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -99,11 +101,11 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
       {/* Next Arrow */}
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 p-2 rounded-full bg-chamBray hover:bg-oxfordBlue transition cursor-pointer z-20"
+        className="absolute top-1/2 right-[-2rem] sm:right-[-2.5rem] md:right-[-3rem] transform -translate-y-1/2 p-1 sm:p-1.5 md:p-2 rounded-full bg-chamBray hover:bg-oxfordBlue transition cursor-pointer z-20"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-white"
+          className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -118,12 +120,12 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
       </button>
 
       {/* Dots */}
-      <div className="flex justify-center mt-4 absolute bottom-0 left-0 right-0">
+      <div className="flex justify-center mt-2 sm:mt-3 md:mt-4 absolute bottom-0 left-0 right-0">
         {cards.map((_, index) => (
           <div
             key={index}
             onClick={() => goToSlide(index)}
-            className={`cursor-pointer w-4 h-4 mx-2 rounded-full ${
+            className={`cursor-pointer w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 mx-1 sm:mx-1.5 md:mx-2 rounded-full ${
               currentIndex === index ? "bg-chamBray" : "bg-gray-400"
             }`}
           ></div>

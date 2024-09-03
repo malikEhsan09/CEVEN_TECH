@@ -39,7 +39,7 @@ function CHero() {
         </div>
 
         {/* Globe component */}
-        <Globe className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 w-full max-w-xl mx-auto" />
+        <Globe className="mt-3 sm:mt-0 md:mt-1 lg:mt-7 w-full max-w-xl mx-auto" />
       </div>
     </>
   );

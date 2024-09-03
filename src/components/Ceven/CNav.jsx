@@ -46,10 +46,10 @@ function CNav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50  transition-transform duration-300"
+      className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300"
       style={{ transform: isVisible ? "translateY(0)" : "translateY(-100%)" }}
     >
-      <div className="bg-richBlack shadow-lg border-b-2 border-silverLakeBlue rounded-b-full">
+      <div className="bg-richBlack shadow-lg lg:border-b-2 lg:border-b-silverLakeBlue rounded-b-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-2 lg:py-4">
             {/* Logo */}
@@ -179,6 +179,8 @@ function CNav() {
           </motion.div>
         )}
       </AnimatePresence>
+      {/* Cross bar on the front z-axis */}
+      {/* <div className="absolute top-0 left-0 right-0 h-1 bg-silverLakeBlue z-[51]"></div> */}
     </nav>
   );
 }

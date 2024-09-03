@@ -33,7 +33,7 @@ function CHero() {
             </ScrollLink>
           </button>
 
-          <button className="w-full sm:w-auto bg-transparent rounded-full py-2 px-6 sm:px-8 font-bold text-sm sm:text-base text-platinum border-2 border-silverLakeBlue hover:border-black hover:bg-[#FAAE3E] hover:text-white transition-all ease-linear duration-200 shadow-lg tracking-wider">
+          <button className="w-full sm:w-auto bg-transparent rounded-full py-2 px-6 sm:px-8 font-bold text-sm sm:text-base text-platinum border-2 border-silverLakeBlue hover:border-black hover:bg-chamBray hover:text-platinum transition-all ease-linear duration-200 shadow-lg tracking-wider">
             <Link to="/eleven">Eleven</Link>
           </button>
         </div>

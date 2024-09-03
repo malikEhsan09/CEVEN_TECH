@@ -44,11 +44,20 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       const duration =
-        speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
+        window.innerWidth < 768 // Check for small devices (e.g., screens smaller than 768px)
+          ? speed === "fast"
+            ? "5s" // Decreased from 10s to 5s for faster speed on small devices
+            : speed === "normal"
+            ? "10s" // Decreased from 20s to 10s for normal speed on small devices
+            : "20s" // Decreased from 40s to 20s for slow speed on small devices
+          : speed === "fast"
+          ? "10s" // Decreased from 20s to 10s for faster speed on larger devices
+          : speed === "normal"
+          ? "20s" // Decreased from 40s to 20s for normal speed on larger devices
+          : "40s"; // Decreased from 80s to 40s for slow speed on larger devices
       containerRef.current.style.setProperty("--animation-duration", duration);
     }
   };
-
   return (
     <div
       ref={containerRef}

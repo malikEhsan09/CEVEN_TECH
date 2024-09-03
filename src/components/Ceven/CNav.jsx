@@ -4,7 +4,7 @@ import logo from "../../../public/Ceven.png";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function CNav() {
+export default function CNav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);

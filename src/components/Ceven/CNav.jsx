@@ -159,7 +159,7 @@ import { Link as ScrollLink } from "react-scroll";
 import logo from "../../../public/Ceven.png";
 import { Link } from "react-router-dom";
 
-function CNav() {
+export function CNav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -380,5 +380,3 @@ function CNav() {
     </>
   );
 }
-
-export default CNav;

@@ -54,7 +54,7 @@ export const InfiniteMovingCards = ({
           ? "10s" // Decreased from 20s to 10s for faster speed on larger devices
           : speed === "normal"
           ? "20s" // Decreased from 40s to 20s for normal speed on larger devices
-          : "40s"; // Decreased from 80s to 40s for slow speed on larger devices
+          : "40s"; 
       containerRef.current.style.setProperty("--animation-duration", duration);
     }
   };

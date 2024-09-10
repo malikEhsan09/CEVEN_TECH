@@ -5,15 +5,19 @@ import star1 from "../../assets/svg/star1.svg";
 import shape from "../../assets/svg/shape.svg";
 import spiral from "../../assets/svg/spiral.svg";
 import { CanvasRevealEffect } from "../../components/ui/canvas-reveal-effect.jsx"; // Adjust the import path according to your project structure
+import client from "../../assets/Ceven/approches/client[1].png";
+import innovation from "../../assets/Ceven/approches/innovation[1].png";
+import collaboration from "../../assets/Ceven/approches/collaboration[1].png";
+import quality from "../../assets/Ceven/approches/diamond[1].png";
 
 export function CanvasRevealEffectDemo() {
   return (
     <div className="py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center bg-white dark:bg-richBlack xl:w-[80rem] lg:-ml-20 md:w-auto mx-auto px-8 hover:cursor-pointer">
       <Card
         title="Client-Centric"
-        icon={<img src={arrow} alt="" className="mx-auto h-16 lg:h-20" />}
+        icon={<img src={client} alt="" className="mx-auto h-16 lg:h-20 " />}
         description="We tailor solutions to your needs, ensuring they fit your requirements."
-        textColor="#FF6EC7"
+        textColor="#748CAB"
       >
         <CanvasRevealEffect
           animationSpeed={5.1}
@@ -22,9 +26,9 @@ export function CanvasRevealEffectDemo() {
       </Card>
       <Card
         title="Innovation-Driven"
-        icon={<img src={star1} alt="" className="mx-auto h-16 lg:h-20" />}
+        icon={<img src={innovation} alt="" className="mx-auto h-16 lg:h-20" />}
         description="We use the latest tech to provide cutting-edge solutions."
-        textColor="#f5f5a8"
+        textColor="#748CAB"
       >
         <CanvasRevealEffect
           animationSpeed={3}
@@ -39,9 +43,11 @@ export function CanvasRevealEffectDemo() {
       </Card>
       <Card
         title="Collaborative"
-        icon={<img src={shape} alt="" className="mx-auto h-16 lg:h-20" />}
+        icon={
+          <img src={collaboration} alt="" className="mx-auto h-16 lg:h-20" />
+        }
         description="We work closely with you, ensuring transparency throughout."
-        textColor="#5d7ef9"
+        textColor="#748CAB"
       >
         <CanvasRevealEffect
           animationSpeed={3}
@@ -51,9 +57,9 @@ export function CanvasRevealEffectDemo() {
       </Card>
       <Card
         title="Quality-Focused"
-        icon={<img src={spiral} alt="" className="mx-auto h-16 lg:h-20" />}
+        icon={<img src={quality} alt="" className="mx-auto h-16 lg:h-20" />}
         description="We prioritize quality, ensuring robust and reliable software."
-        textColor="#ff833b"
+        textColor="#748CAB"
       >
         <CanvasRevealEffect
           animationSpeed={3}

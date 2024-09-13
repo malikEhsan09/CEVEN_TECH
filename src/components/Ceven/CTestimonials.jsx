@@ -122,12 +122,13 @@ const CARDS = [
   {
     id: 0,
     name: "Ehsan",
-    designation: "Senior Software Engineer",
+    designation: "Senior React Developer",
     image: ehsan,
     content: (
       <p>
-        These cards are fantastic! <Highlight>I want to use them</Highlight> in
-        my project!
+        Webiste is Ay hay hay!{" "}
+        <Highlight> Hun ki dasan tenu bus use karo hun anno !!</Highlight> in my
+        project!
       </p>
     ),
     rating: 5,
@@ -139,8 +140,7 @@ const CARDS = [
     image: moiz,
     content: (
       <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project.
+        khara jatuk , <Highlight>I want to use them</Highlight> in my project.
       </p>
     ),
     rating: 4,
@@ -152,8 +152,7 @@ const CARDS = [
     image: ajmal,
     content: (
       <p>
-        Framer Motion is a godsend, ngl! It's like having a personal trainer for
-        my animations.
+        Aaa website bus kamal di aa <Highlight> Chasss aa gae jeeh</Highlight>
       </p>
     ),
     rating: 3,

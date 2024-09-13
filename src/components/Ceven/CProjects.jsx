@@ -1,32 +1,35 @@
 import { CardStack } from "../ui/card-stack";
 import { SparklesCore } from "../ui/sparkles.jsx";
 import { useState, useEffect } from "react";
+import Mockup1 from "../../assets/mockups/Mockup1.jpg";
+import Mockup2 from "../../assets/mockups/Mockup2.jpg";
+import Mockup3 from "../../assets/mockups/Mockup3.jpg";
 
 // Sample project images as strings
 const CARDS = [
   {
     id: 0,
     name: "Project 1",
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHBob3RvJTIwMSUyMGZpbGxlfGVufDB8fHx8MTY0OTQ4MDgwMA&ixlib=rb-1.2.1&q=80&w=400",
+    image: Mockup1,
+    title: "Budgeting and Finance",
     description:
-      "This is a description of Project 1. It showcases the features and technologies used.",
+      "Empowers users with tools for managing expenses Budgeting, Setting financial goals, and gaining insights into their financial health",
   },
   {
     id: 1,
     name: "Project 2",
-    image:
-      "https://images.unsplash.com/photo-1521747116042-5a810fda9664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIyfHxwb3RvJTIwMiUyMGZpbGxlfGVufDB8fHx8MTY0OTQ4MDgwMA&ixlib=rb-1.2.1&q=80&w=400",
+    title: "Wellness Hub",
+    image: Mockup2,
     description:
-      "This is a description of Project 2. It highlights the key aspects of the project.",
+      "Centralizes features to promote a healthy lifestyle. Encompassing fitness, medication management, hydration goals, and smoking quitting support",
   },
   {
     id: 2,
     name: "Project 3",
-    image:
-      "https://images.unsplash.com/photo-1521747116042-5a810fda9664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIyfHxwb3RvJTIwMyUyMGZpbGxlfGVufDB8fHx8MTY0OTQ4MDgwMA&ixlib=rb-1.2.1&q=80&w=400",
+    title: "Productivity Nest",
+    image: Mockup3,
     description:
-      "This is a description of Project 3. It explains the goals and outcomes.",
+      "Enhances productivity and organization through task management Calendar integration, goal tracking, and access to productivity-enhancing resources.",
   },
 ];
 

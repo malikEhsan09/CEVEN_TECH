@@ -88,8 +88,11 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
                 alt={card.name}
                 className="w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] object-cover rounded-2xl sm:rounded-3xl transition-all duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl sm:rounded-3xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-center p-4 sm:p-6 md:p-8 text-sm sm:text-base md:text-lg">
+              <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl sm:rounded-3xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h2 className="text-platinum text-3xl font-bold mb-2 text-center">
+                  {card.title}
+                </h2>
+                <p className="text-white text-center p-4 sm:p-6 md:p-8 text-xl sm:text-base md:text-lg">
                   {card.description}
                 </p>
               </div>
